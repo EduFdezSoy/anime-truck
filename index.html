@@ -5,8 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anime Truck</title>
-  <meta name="description" content="Your anime tracker">
+  <meta name="description" content="Delivering your anime">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-divider@1.1.0/dist/bulma-divider.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
   <script src="assets/js/rss-loader.js"></script>
   <script src="assets/js/rss-presenter.js"></script>
   <script src="assets/js/breadcrumb-manager.js"></script>
@@ -16,10 +19,11 @@
 
 <body>
   <!-- #region header - toolbar -->
-  <nav class="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
+  <nav class="navbar has-shadow is-spaced is-light" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      <a class="navbar-item" href="#" title="Delivering your anime">
+        <i class="fas fa-truck fa-2x"></i>&nbsp;&nbsp;
+        <h2 class="subtitle">Anime Truck</h2>
       </a>
 
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
@@ -32,12 +36,16 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item">
-          Home
+        <a class="navbar-item" href="#">
+          Latest Releases
         </a>
 
-        <a class="navbar-item">
-          Documentation
+        <a class="navbar-item" href="#">
+          Schedule
+        </a>
+
+        <a class="navbar-item" href="https://nyaa.si/user/subsplease">
+          SubsPlease on Nyaa
         </a>
 
         <div class="navbar-item has-dropdown is-hoverable">
@@ -46,18 +54,18 @@
           </a>
 
           <div class="navbar-dropdown">
-            <a class="navbar-item">
-              About
+            <a class="navbar-item" href="irc://irc.rizon.net/subsplease">
+              SubsPlease IRC
             </a>
-            <a class="navbar-item">
-              Jobs
-            </a>
-            <a class="navbar-item">
-              Contact
+            <a class="navbar-item" href="https://discord.gg/33Hxdas">
+              SubsPlease Discord
             </a>
             <hr class="navbar-divider">
             <a class="navbar-item">
-              Report an issue
+              About the page
+            </a>
+            <a class="navbar-item" href="https://github.com/EduFdezSoy/anime-truck">
+              Source code
             </a>
           </div>
         </div>
@@ -66,11 +74,8 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
-            </a>
             <a class="button is-light">
-              Log in
+              <i class="fas fa-sync-alt"></i>
             </a>
           </div>
         </div>
@@ -78,38 +83,72 @@
     </div>
   </nav>
   <!-- #endregion -->
-  <!-- #region breadcrum -->
+  <!-- #region breadcrumb -->
   <section class="section">
     <nav class="breadcrumb" aria-label="breadcrumbs">
       <ul id="breadcrumb">
-        <li class="is-active"><a href="#">Last Relases</a></li>
+        <li class="is-active"><a href="#">Latest Releases</a></li>
       </ul>
     </nav>
   </section>
   <!-- #endregion -->
   <!-- #region main body -->
-  <section class="section">
+  <section class="section no-top-padding">
     <div class="container">
-      <h1 class="title">
-        Hello World
+      <h1 class="title is-4">
+        Latest Releases
       </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
-    </div>
-    <br>
-    <div class="container">
-      <p id="debug">loading...</p>
+      <div class="columns">
+        <div class="column is-four-fifths">
+          <table class="table is-hoverable is-fullwidth">
+            <tr>
+              <td>Anime title goes here</td>
+              <td>6</td>
+              <td>torrent</td>
+              <td>magnet</td>
+            </tr>
+            <tr>
+              <td>Anime title goes here</td>
+              <td>5</td>
+              <td>torrent</td>
+              <td>magnet</td>
+            </tr>
+            <tr>
+              <td>Anime title goes here</td>
+              <td>4</td>
+              <td>torrent</td>
+              <td>magnet</td>
+            </tr>
+            <tr>
+              <td>Anime title goes here</td>
+              <td>3</td>
+              <td>torrent</td>
+              <td>magnet</td>
+            </tr>
+          </table>
+          <p id="debug">loading...</p>
+        </div>
+        <div class="column">
+          <div class="box">
+            <p class="subtitle">Shedule</p>
+            <p>
+              Shedule goes brrr
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <!-- #endregion -->
   <!-- #region footer -->
   <footer class="footer">
     <div class="content has-text-centered">
+      <p class="title is-3">Anime Truck</p>
+      <p class="subtitle">Delivering your anime</p>
+      <div class="divider is-left"></div>
       <p>
-        <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        Made by <a href="https://edufdez.es">EduFdezSoy</a> & <a href="#">Yezarou</a>. Code under <a
+          href="http://opensource.org/licenses/mit-license.php">MIT</a> license.
       </p>
     </div>
   </footer>
