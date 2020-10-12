@@ -10,7 +10,32 @@ window.onload = function () {
     breadcrumb.add("test5", "#")
     breadcrumb.remove(1)
 
-    document.getElementById("reloadButton").onclick = function() {
-        rss.reload();
-    };
+    buttonsActions()
 };
+
+//#region functions
+
+function buttonsActions() {
+    // truck logo action
+    document.getElementById("logoButton").onclick = function () {
+        reload();
+    };
+
+    // reload action
+    document.getElementById("reloadButton").onclick = function () {
+        reload();
+    };
+}
+
+function reload() {
+    document.getElementById("reloadButton").classList.add("fa-spin");
+    document.getElementById("debug").innerHTML = "Loading...";
+
+    rss.onLoadCompleted(() => {
+        document.getElementById("reloadButton").classList.remove("fa-spin");
+    })
+
+    rss.fetch();
+}
+
+//#endregion
