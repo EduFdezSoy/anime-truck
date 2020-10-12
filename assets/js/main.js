@@ -29,7 +29,7 @@ function buttonsActions() {
 
 function reload() {
     document.getElementById("reloadButton").classList.add("fa-spin");
-    document.getElementById("debug").innerHTML = "Loading...";
+    document.getElementById("loading").classList.remove("is-hidden");
 
     rss.onLoadCompleted(() => {
         document.getElementById("reloadButton").classList.remove("fa-spin");
