@@ -84,9 +84,7 @@ class RssLoader {
                     }
                 })
 
-                console.log(this.chapters);
-                // new RssPresenter(data);
-                console.log(data);
+                new RssPresenter(this.chapters);
             })
             .then(data => this.done())
     }
