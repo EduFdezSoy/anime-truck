@@ -9,4 +9,9 @@ class RssLoader {
             .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
             .then(data => new RssPresenter(data))
     }
+
+    reload = function() {
+        document.getElementById("debug").innerHTML = "Loading...";
+        this.fetch();
+    }
 }

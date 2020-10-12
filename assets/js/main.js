@@ -9,4 +9,8 @@ window.onload = function () {
     breadcrumb.add("test4", "#")
     breadcrumb.add("test5", "#")
     breadcrumb.remove(1)
+
+    document.getElementById("reloadButton").onclick = function() {
+        rss.reload();
+    };
 };
