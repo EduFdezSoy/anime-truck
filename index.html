@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anime Truck</title>
   <meta name="description" content="Delivering your anime">
+  <link rel="icon" type="image/svg" href="assets/img/truck-solid.svg"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-divider@1.1.0/dist/bulma-divider.min.css">
   <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/data/chapter.js"></script>
   <script src="assets/js/rss-loader.js"></script>
   <script src="assets/js/rss-presenter.js"></script>
   <script src="assets/js/breadcrumb-manager.js"></script>
@@ -100,33 +102,8 @@
       </h1>
       <div class="columns">
         <div class="column is-four-fifths">
-          <table class="table is-hoverable is-fullwidth">
-            <tr>
-              <td>Anime title goes here</td>
-              <td>6</td>
-              <td>torrent</td>
-              <td>magnet</td>
-            </tr>
-            <tr>
-              <td>Anime title goes here</td>
-              <td>5</td>
-              <td>torrent</td>
-              <td>magnet</td>
-            </tr>
-            <tr>
-              <td>Anime title goes here</td>
-              <td>4</td>
-              <td>torrent</td>
-              <td>magnet</td>
-            </tr>
-            <tr>
-              <td>Anime title goes here</td>
-              <td>3</td>
-              <td>torrent</td>
-              <td>magnet</td>
-            </tr>
-          </table>
-          <p id="debug">loading...</p>
+          <table id="release-table" class="table is-hoverable is-fullwidth is-hidden"></table>
+          <p id="loading">loading...</p>
         </div>
         <div class="column">
           <div class="box">
