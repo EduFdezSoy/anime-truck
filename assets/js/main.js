@@ -1,4 +1,5 @@
 window.onload = function () {
+    this.active = [];
     rss = new RssLoader(`https://cors-anywhere.herokuapp.com/https://nyaa.si/?page=rss&u=subsplease`);
     rss.fetch();
 
@@ -53,6 +54,24 @@ function initializeClock() {
 function updateClock() {
     var clockElement = document.getElementById("clock");
     clockElement.innerHTML = TimeFormatter.getTimeWithSeconds(new Date());
+}
+
+function showOneHideAll(id) {
+    let show = true;
+
+    for (let i = 0; i < this.active.length; i++) {
+        const element = this.active.pop();
+        if (element == id) {
+            show = false;
+        }
+        
+        document.getElementById(element).classList.add('is-hidden');
+    }
+
+    if (show) {
+        this.active.push(id);
+        document.getElementById(id).classList.remove('is-hidden');    
+    }
 }
 
 //#endregion
