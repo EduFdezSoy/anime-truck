@@ -16,6 +16,9 @@
   <script src="assets/js/rss-loader.js"></script>
   <script src="assets/js/rss-presenter.js"></script>
   <script src="assets/js/breadcrumb-manager.js"></script>
+  <script src="assets/js/time-formatter.js"></script>
+  <script src="assets/js/schedule-loader.js"></script>
+  <script src="assets/js/schedule-presenter.js"></script>
   <script src="assets/js/main.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
 </head>
@@ -102,16 +105,18 @@
         Latest Releases
       </h1>
       <div class="columns">
-        <div class="column is-four-fifths">
+        <div class="column is-three-quarters">
           <table id="release-table" class="table is-hoverable is-fullwidth is-hidden"></table>
           <p id="loading">loading...</p>
         </div>
         <div class="column">
           <div class="box">
-            <p class="subtitle">Shedule</p>
-            <p>
-              Shedule goes brrr
-            </p>
+            <p class="title is-4 has-text-centered">Today's Schedule!</p>
+            <p id="clock" class="subtitle is-4 has-text-centered">00:11:11</p>
+            <table id="schedule-table" class="table">
+              <tbody>
+            </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -125,7 +130,7 @@
       <p class="subtitle">Delivering your anime</p>
       <div class="divider is-left"></div>
       <p>
-        Made by <a href="https://edufdez.es">EduFdezSoy</a> & <a href="#">Yezarou</a>. Code under <a
+        Made by <a href="https://edufdez.es">EduFdezSoy</a> & <a href="https://github.com/yezarou">yezarou</a>. Code under <a
           href="http://opensource.org/licenses/mit-license.php">MIT</a> license.
       </p>
     </div>

@@ -12,6 +12,10 @@ window.onload = function () {
     breadcrumb.remove(1)
 
     buttonsActions()
+    initializeClock();
+
+    schedule = new ScheduleLoader();
+    schedule.fetch();
 };
 
 //#region functions
@@ -37,6 +41,19 @@ function reload() {
     })
 
     rss.fetch();
+}
+
+function initializeClock() {
+    // Set the initial time.
+    this.updateClock()
+
+    // Updates the element every 10
+    setInterval(updateClock, 500);
+}
+
+function updateClock() {
+    var clockElement = document.getElementById("clock");
+    clockElement.innerHTML = TimeFormatter.getTimeWithSeconds(new Date());
 }
 
 function showOneHideAll(id) {
